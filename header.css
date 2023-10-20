@@ -1,65 +1,88 @@
 header {
-   height: 100vh;     
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   border-bottom: 2px solid #222;
-   overflow: hidden;
-   padding-bottom: 50px;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #222;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
+.bg-image img {
+  width: 100%;
 }
 
 .logo-container {
-   flex: 2;
-   transform: scale(0.6);
+  flex: 2;
+  transform: scale(0.6);
 }
 
 #logo {
-   width: 100%;
-   aspect-ratio: 1;
+  width: 100%;
+  aspect-ratio: 1;
 }
 
 .banner {
-   flex: 1;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-evenly;
-   gap: 15px;
-   font-size: 0.75em;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 15px;
+  font-size: 0.75em;
+  position: relative;
+  opacity: 0.75;
 }
 
 .banner .igdm {
-   width: fit-content;
-   padding: 0.5em 1em;
-   background-color: #5E10CA;
-   font-size: 2em;
+  width: fit-content;
+  padding: 0.5em 1em;
+  background-color: #5e10ca;
+  font-size: 2em;
 }
 
-.banner-top {  
-   border-radius: 5px 50px 50px 50px;
-   align-self: flex-start;
+.banner-top {
+  border-radius: 5px 50px 50px 50px;
+  align-self: flex-start;
 }
 
-.banner-down {  
-   border-radius: 50px 5px 50px 50px;
-   align-self: flex-end;
+.banner-down {
+  border-radius: 50px 5px 50px 50px;
+  align-self: flex-end;
 }
 
-.banner-down img{  
-   height: 1em;
+.banner-down img {
+  height: 1em;
+}
+
+.bg-image {
+   display: none;
+  position: absolute;
+  transform: scale(240%) translate(-18%, -10%);
+  z-index: -1;
 }
 
 @media (min-width: 768px) {
-   header {
-      height: fit-content;
-      padding-bottom: 0;
-   }
+  header {
+    height: fit-content;
+    padding-bottom: 0;
+  }
 
-   .banner {
-      flex: 3;
-      padding-inline: 25%;
-   }
+  .banner {
+    flex: 3;
+    padding-inline: 25%;
+  }
+
+  .bg-image {
+   display: block;
+  }
+}
+
+@media (min-width: 3850px) {
+  .banner .igdm {
+    margin-right: 10vmax;
+  }
 }
 
 * {
-   box-sizing: border-box;
+  box-sizing: border-box;
 }
