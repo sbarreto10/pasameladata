@@ -17,9 +17,25 @@
       transition: background-color 0.15s;
    }
 
-   #subscription-box:hover {
+   
+
+   @keyframes shrink-animation {
+      0% {
+        transform: scale(1);
+        background-color: rgba(153, 0, 255, 0.5);
+      }
+      100% {
+        transform: scale(0.9);
+        background-color: rgba(54, 0, 142, 0.25);
+
+      }
+    }
+
+    #subscription-box:hover {
       background-color: rgba(153, 0, 255, 0.25);
+      animation: shrink-animation linear 0.4s infinite;
    }
+
 
    #subscription-box span {
       font-size: 4em;
@@ -57,21 +73,24 @@
 .search-container {
    display: flex;
    align-items: baseline;
+   justify-content: right;
    padding: 60px 60px;
    background-color: #7c1bbd;
 }
    
-   .search-container span{
+   .search-text{
       font-size: 2em;
-      margin-right: 60px;
+      flex: 2;
    }
 
    .search-bar{
-      flex: 1;
       font-size: 1.6em;
       padding: 20px;
-      border-radius: 30px;
+      border-radius: 50px;
       border-style: hidden;
+      flex: 3;
+      z-index: 1;
+      transition: flex 0.25s;
    }
 
 /* main-content */
