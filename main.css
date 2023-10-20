@@ -1,6 +1,6 @@
 /* main-head (?) */
 
-.prev-bar {
+.prev-section {
    display: flex;
 }
 
@@ -12,7 +12,6 @@
       text-align: center;
       justify-content: center;
       font-size: 2em;
-      width: 25%;
       padding-inline: 10px;
       box-sizing: border-box;
    }
@@ -52,8 +51,7 @@
    display: flex;
    align-items: baseline;
    padding: 60px 60px;
-/* margin: 30px 15px; */
-background-color: #7c1bbd;
+   background-color: #7c1bbd;
 }
    
    .search-container span{
