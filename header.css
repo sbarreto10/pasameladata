@@ -1,42 +1,37 @@
 header {
-   height: 100vh;
+   height: 100vh;     
    display: flex;
-   /* padding: 20px 20px 35px 20px; */
    justify-content: space-between;
    align-items: center;
    border-bottom: 2px solid #222;
+   overflow: hidden;
+   padding-bottom: 50px;
 }
 
 .logo-container {
-   border-radius: 100%;
-   /* width: 10%; */
-   flex: 1;
-   aspect-ratio: 1;
-   overflow: hidden;
-   background-color: rgb(230, 230, 230);
+   flex: 2;
    transform: scale(0.6);
 }
 
 #logo {
    width: 100%;
    aspect-ratio: 1;
-   transform: scale(1.25);
 }
 
 .banner {
-   width: 100%;
    flex: 1;
    display: flex;
    flex-direction: column;
    justify-content: space-evenly;
    gap: 15px;
+   font-size: 0.75em;
 }
 
 .banner .igdm {
-   font-size: 2em;
    width: fit-content;
-   padding: 20px 40px;
+   padding: 0.5em 1em;
    background-color: #5E10CA;
+   font-size: 2em;
 }
 
 .banner-top {  
@@ -51,4 +46,20 @@ header {
 
 .banner-down img{  
    height: 1em;
+}
+
+@media (min-width: 768px) {
+   header {
+      height: fit-content;
+      padding-bottom: 0;
+   }
+
+   .banner {
+      flex: 3;
+      padding-inline: 25%;
+   }
+}
+
+* {
+   box-sizing: border-box;
 }
