@@ -17,7 +17,7 @@
    }
 
    #subscription-box:hover {
-      font-weight: bold;
+      background-color: rgba(153, 0, 255, 0.25);
    }
 
    #subscription-box span {
@@ -29,14 +29,21 @@
    .places {
       flex: 3;
       display: grid;
-      grid-template-columns: 2fr 3fr;
-      grid-template-rows: 400px;
-      padding: 20px;
+      grid-template-rows: 1fr 1fr;
+      grid-template-rows: 50vh;
       gap: 10px;
+      padding-block: 10px;
    }
 
    .place {
       overflow: hidden;
+      border-radius: 15px;
+      transition: border 0.25s;
+   }
+
+   .place:hover {
+      border: 10px solid #7c1bbd;
+      
    }
 
    .place img {
@@ -72,4 +79,25 @@
    flex: 1;
    grid-template-columns: 1fr 1fr;
    grid-template-rows: 800px 800px;
+}
+
+@media (min-width: 768px) {
+   .places {
+      flex: 3;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 400px;
+      padding: 20px;
+      gap: 10px;
+   }
+
+   .place {
+      overflow: hidden;
+   }
+
+   .place img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
 }
