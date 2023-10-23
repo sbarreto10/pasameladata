@@ -13,8 +13,7 @@
   justify-content: center;
   font-size: 2em;
   box-sizing: border-box;
-  transition: background-color 0.15s;
-  border-radius: 100%;
+  border-radius: 10%;
 }
 
 .big-view-sub-link {
@@ -30,7 +29,7 @@
 }
 
 .small-view-sub-link span {
-   animation: shrink-animation ease-in alternate 1s infinite;
+   animation: marcianito-flotante ease-in alternate 1s infinite;
 }
 
 .small-view-sub-link .btn {
@@ -117,7 +116,7 @@
   font-size: 4em;
 }
 
-@keyframes shrink-animation {
+@keyframes marcianito-flotante {
    0% {
      transform: translate(0, -5%);
    }
@@ -127,17 +126,6 @@
  }
 
 @media (min-width: 768px) {
-  @keyframes shrink-animation {
-    0% {
-      transform: scale(1);
-      background-color: rgba(153, 0, 255, 1);
-    }
-    100% {
-      transform: scale(0.9);
-      background-color: rgba(54, 0, 142, 0);
-    }
-  }
-
   #popular {
     flex: 7;
   }
@@ -145,11 +133,12 @@
   #subscription-box {
     padding-inline: 30px;
     transform: scale(0.8);
+    transition: box-shadow 0.25s, background-color 0.25s;
   }
 
   #subscription-box:hover {
-    background-color: rgba(153, 0, 255, 0.25);
-    animation: shrink-animation linear 0.5s infinite;
+    background-color: #7c1bbd;
+    box-shadow: 0 0 30px rgb(153, 0, 255);
     cursor: pointer;
   }
 
