@@ -1,4 +1,5 @@
-# pasameladata
-Repositorio del proyecto final del curso de Frontend de BA Multiplica
+# Repositorio del proyecto final del curso de Frontend de BA Multiplica
 
-# sbarreto10.github.com/pasameladata
+# Pasame La Data
+
+# Deploy: sbarreto10.github.com/pasameladata
