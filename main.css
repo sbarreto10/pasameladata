@@ -50,6 +50,18 @@
 
 /* prev-content */
 
+.subtitle {
+   text-align: center;
+   background-color: #7c1bbd;
+   padding: 1em;
+}
+
+.subtitle a{
+   color: #2c0049!important;
+   font-weight: bold;
+   text-decoration: underline!important;
+}
+
 .places {
   flex: 3;
   display: grid;
