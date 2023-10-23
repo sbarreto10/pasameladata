@@ -1,18 +1,41 @@
 * {
-   margin: 0;
-   padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-   width: 100%;
-   background-color: rgb(7,7,7);
-   color: rgb(230, 230, 230);
-   font-family: Roboto;
-   display: flex;
-   flex-direction: column;
+  width: 100%;
+  background-color: rgb(7, 7, 7);
+  color: rgb(230, 230, 230);
+  font-family: Roboto;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
-   text-decoration: none!important;
-   color: inherit!important;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+#marcianito-box {
+  width: 100vw;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+#marcianito {
+  height: 100%;
+  position: absolute;
+  animation: moverMarcianito 5s linear infinite;
+}
+
+@keyframes moverMarcianito {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 100%;
+  }
 }
