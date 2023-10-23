@@ -1,14 +1,21 @@
 footer {
-   margin: 30px 30px;
-   display: flex;
-   justify-content: space-evenly;
+  margin: 30px 30px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .footer-logo {
-   width: 100px;
-
+  width: 100px;
 }
 
 .footer-logo img {
-   width: 100%;
+  width: 100%;
+}
+
+.footer-links {
+   list-style-position: inside;
+}
+
+@media (min-width: 768px) {
+
 }
