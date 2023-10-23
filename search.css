@@ -1,0 +1,27 @@
+.search-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: right;
+  padding: 30px 30px;
+  background-color: #7c1bbd;
+}
+
+.search-text {
+  font-size: 2em;
+  flex: 0 0 auto; /* Esto asegura que la caja no crezca ni se encoja automáticamente */
+  white-space: nowrap; /* Evita que el texto se rompa y siga en líneas nuevas */
+  overflow: hidden; /* Oculta el texto que desborde la caja */
+  text-overflow: ellipsis;
+}
+
+.search-bar {
+  font-size: 1.6em;
+  padding: 0.75em;
+  margin-inline-start: 0.75em;
+  border-radius: 50px;
+  border-style: hidden;
+  flex: 3;
+  z-index: 1;
+  transition: flex 0.25s;
+  background-color: #eee;
+}
