@@ -9,7 +9,7 @@
 #subscription-box {
   display: flex;
   flex-direction: column;
-  flex: 100vh;
+  flex: 75vh;
   text-align: center;
   justify-content: center;
   font-size: 2em;
@@ -26,7 +26,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
 }
 
 .small-view-sub-link span {
