@@ -19,7 +19,7 @@ a {
 
 #marcianito-box {
   width: 100vw;
-  height: 20vh;
+  height: 4em;
   overflow: hidden;
   position: relative;
   z-index: 0;
@@ -43,5 +43,9 @@ a {
 @media (min-width: 768px) {
   body {
     font-size: 0.66em;
+  }
+
+  #marcianito-box {
+    height: 10em;
   }
 }

@@ -9,7 +9,6 @@ header {
 
 .bg-image img {
   width: 100%;
-  filter: blur(1px);
 }
 
 .logo-container {
