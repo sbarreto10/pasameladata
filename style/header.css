@@ -32,24 +32,24 @@ header {
   opacity: 0.75;
 }
 
-.banner .igdm {
+.igdm {
   width: fit-content;
   padding: 0.5em 1em;
   background-color: #5e10ca;
   font-size: 2em;
 }
 
-.banner-top {
+.igdm-top {
   border-radius: 5px 50px 50px 50px;
   align-self: flex-start;
 }
 
-.banner-down {
+.igdm-down {
   border-radius: 50px 5px 50px 50px;
   align-self: flex-end;
 }
 
-.banner-down img {
+.igdm-down img {
   height: 1em;
 }
 
@@ -76,6 +76,7 @@ header {
   }
 }
 
+/* MQ para solucionar problemas con tamaños muy grandes */
 @media (min-width: 3850px) {
   .banner .igdm {
     margin-right: 10vmax;
