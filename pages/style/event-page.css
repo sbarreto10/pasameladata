@@ -1,53 +1,106 @@
+/* Header */
+
 header {
-   display: flex;
-   flex-direction: column;
-   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .event-image-container {
-   position: relative;
-   flex: 1;
-   overflow: hidden;
-   display: flex;
-   justify-content: center;
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .event-image-bg {
-   position: absolute;
-   height: 50vh;
-   width: 100%;
-   top: -50%;
-   z-index: -1;
-   border-radius: 75px;
-   filter: blur(25px);
+  position: absolute;
+  height: 50vh;
+  width: 100%;
+  top: -50%;
+  z-index: -1;
+  border-radius: 75px;
+  filter: blur(25px);
 }
 
 .event-image {
-   object-fit: contain;
-   border-radius: 0px 0px 15px 15px;
+  object-fit: contain;
+  border-radius: 0px 0px 15px 15px;
 }
 
 nav {
-   flex: 1;
-   z-index: 1;
+  flex: 1;
+  z-index: 1;
 }
 
 nav ul {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: space-evenly;
-   list-style-type: none;
-   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style-type: none;
+  height: 100%;
 }
 
 nav ul li {
-   display: flex;
-   align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-nav ul li a{
-   padding: 0.25em 1em;
-   background-color: #5e10ca;
-   border-radius: 5px;
+nav ul li a {
+  padding: 0.25em 1em;
+  background: linear-gradient(
+    180deg,
+    rgba(7, 7, 7, 1) 50%,
+    rgba(94, 16, 203, 1) 100%
+  );
+  border-radius: 5px;
+}
+
+/* Main */
+
+#event-description {
+  background: rgb(7, 7, 7);
+  padding: 1em;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background: linear-gradient(
+    180deg,
+    rgba(7, 7, 7, 1) 50%,
+    rgba(94, 16, 203, 1) 100%
+  );
+}
+
+.event-title {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.event-time span {
+  color: rgb(255, 157, 0);
+}
+
+.event-details a {
+  text-decoration: underline !important;
+}
+
+.event-location {
+  display: flex;
+  justify-content: center;
+}
+
+.event-location iframe {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.66);
+}
+
+.event-main-description {
+  padding: 0.5em;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.66);
 }
