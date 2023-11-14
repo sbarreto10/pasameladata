@@ -52,11 +52,11 @@
           <div class="event-title">Carl Cox en Madero - Buenos Aires</div>
           <!-- Dinamico -->
           <div class="event-time">
-            17/12/2023 - 18:00 - <span>Única vez</span>
+            17/12/2023 - 18:00 - <span><u>Única vez</u></span>
           </div>
           <!-- Dinamico -->
           <div class="event-access">
-            Entradas disponibles <a href="#">en este link</a>
+            Entradas disponibles <a href="#"><u>en este link</u></a>
           </div>
         </div>
         <div class="event-location">
@@ -90,7 +90,8 @@
               />
             </div>
             <div class="review-title">
-              Review de <span class="reviewer-name"><a href="#">Manuel Gisbert</a></span>
+              Review de
+              <span class="reviewer-name"><a href="#">Manuel Gisbert</a></span>
             </div>
           </div>
           <div class="review-bottom">
@@ -108,16 +109,44 @@
               />
             </div>
             <div class="review-title">
-              Review de <span class="reviewer-name"><a href="#">Lara Torales</a></span>
+              Review de
+              <span class="reviewer-name"><a href="#">Lara Torales</a></span>
             </div>
           </div>
           <div class="review-bottom">
-            Enim, ipsa inventore temporibus excepturi recusandae corrupti magnam! Numquam incidunt eum quas sapiente rerum omnis quam, quasi laudantium assumenda enim in? Reprehenderit facere nobis ab animi quo.
+            Enim, ipsa inventore temporibus excepturi recusandae corrupti
+            magnam! Numquam incidunt eum quas sapiente rerum omnis quam, quasi
+            laudantium assumenda enim in? Reprehenderit facere nobis ab animi
+            quo.
           </div>
         </div>
-        <span><a href="#">Ver todas las reviews</a></span>
+        <br>
+        <span><a class="show-all-link" href="#">Ver todas las reviews</a></span>
       </section>
-      <section id="event-opinions" class="bg-success event-section"></section>
+
+      <section id="event-opinions" class="event-section">
+        <div class="write-opinion">
+          <textarea
+            name="event-opinion-textarea"
+            id="event-opinion-textarea"
+            placeholder="Deja una opinión..."
+          ></textarea>
+          <button class="event-button">Enviar</button>
+        </div>
+        <div class="opinions">
+          <div class="opinion">Ex omnis adipisci saepe at voluptatum</div>
+          <div class="opinion">
+            Animi dolorem nam perspiciatis nesciunt optio sunt
+          </div>
+          <div class="opinion">
+            Nobis, soluta consequatur tempore tempora, rem, officia doloremque
+            voluptatem labore eius nisi autem magnam consectetur!
+          </div>
+          <br>
+          <span><a class="show-all-link" href="#">Ver todas las opiniones</a></span>
+        </div>
+      </section>
+
       <section id="event-attendance" class="bg-danger event-section"></section>
     </main>
   </body>
