@@ -82,7 +82,7 @@ nav ul li a {
   font-weight: bold;
 }
 
-.event-time span {
+.mandarina {
   color: rgb(255, 157, 0);
 }
 
@@ -102,7 +102,7 @@ nav ul li a {
   padding: 0.75em 0.75em 0.75em;
   border-radius: 0.75em;
   border: none;
-  background: linear-gradient(0deg, transparent 50%, rgb(7, 7, 7) 100%);
+  background: linear-gradient(180deg, rgb(7, 7, 7) 0%, rgb(94, 16, 203) 100%);
 }
 
 #event-pics {
@@ -110,13 +110,12 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  background: linear-gradient(180deg, rgb(94, 16, 203) 0%, rgb(7, 7, 7) 100%);
+  background: linear-gradient(0deg, rgb(7, 7, 7) 0%, rgb(94, 16, 203) 100%);
 }
 
 .pic-gallery {
   display: flex;
   flex-direction: column;
-  padding-block: 2em;
   gap: 1em;
 }
 
@@ -130,7 +129,7 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  background: linear-gradient(0deg, rgb(94, 16, 203) 0%, rgb(7, 7, 7) 100%);
+  background: linear-gradient(180deg, rgb(7, 7, 7) 0%, rgb(94, 16, 203) 100%);
 }
 
 .review-card {
@@ -174,10 +173,35 @@ nav ul li a {
   padding: 1.25em 1.25em 1em 1em;
 }
 
-.show-all-link {
+.show-more-link {
   padding: 0.75em;
   border-radius: 0.5em;
   background-color: rgba(0, 0, 0, 0.66);
   text-decoration: underline!important;
   font-weight: bold;
+}
+
+#event-attendance {
+  padding: 5em 1em;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+  background: linear-gradient(0deg, rgb(7, 7, 7) 0%, rgb(94, 16, 203) 100%);
+}
+
+.yendo-button {
+  padding: 0.25em 1em;
+  background: linear-gradient(
+    0deg,
+    rgba(7, 7, 7, 1) 0%,
+    rgb(121, 16, 151) 100%
+  );
+  border-radius: 2em;
+}
+
+.yendo-button:hover {
+  opacity: 0.75;
+  outline: none;
 }
