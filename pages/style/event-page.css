@@ -74,7 +74,7 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  background: linear-gradient(180deg, rgb(7, 7, 7) 50%, rgb(94, 16, 203) 100%);
+  background: linear-gradient(180deg, rgb(7, 7, 7) 0%, rgb(94, 16, 203) 100%);
 }
 
 .event-title {
@@ -105,18 +105,38 @@ nav ul li a {
   background: linear-gradient(0deg, transparent 50%, rgb(7, 7, 7) 100%);
 }
 
+#event-pics {
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background: linear-gradient(180deg, rgb(94, 16, 203) 0%, rgb(7, 7, 7) 100%);
+}
+
+.pic-gallery {
+  display: flex;
+  flex-direction: column;
+  padding-block: 2em;
+  gap: 1em;
+}
+
+.pic-gallery img {
+  width: 100%;
+  border-radius: 1em 0 1em 0;
+}
+
 #event-reviews {
   padding: 2em 1em;
   display: flex;
   flex-direction: column;
   gap: 1em;
-  background: linear-gradient(180deg, rgb(94, 16, 203) 50%, rgb(7, 7, 7) 100%);
+  background: linear-gradient(0deg, rgb(94, 16, 203) 0%, rgb(7, 7, 7) 100%);
 }
 
 .review-card {
   display: flex;
   flex-direction: column;
-  border-radius: 2em;
+  border-radius: 2em 0 2em 0;
   overflow: hidden;
   background: linear-gradient(
     180deg,
@@ -142,6 +162,10 @@ nav ul li a {
   width: 100%;
 }
 
+.review-title {
+  flex: 1;
+}
+
 .review-title .reviewer-name {
   font-weight: bold;
 }
@@ -156,51 +180,4 @@ nav ul li a {
   background-color: rgba(0, 0, 0, 0.66);
   text-decoration: underline!important;
   font-weight: bold;
-}
-
-#event-opinions {
-  padding: 2em 1em;
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-  background: linear-gradient(180deg, rgb(7, 7, 7) 50%, rgb(94, 16, 203) 100%);
-}
-
-.write-opinion textarea {
-  padding: 0.5em 0.75em;
-  border-radius: 0.5em;
-  border: none;
-  outline: none;
-  resize: none;
-  caret-color: #f0f0f0;
-  color: inherit;
-  background-color: rgba(94, 16, 203, 0.25);
-  transition: width 1s, height 0.25s;
-}
-
-.write-opinion textarea::placeholder {
-  color: #b0b0b0
-}
-
-.event-button {
-  padding: 0.25em 1em;
-  background: linear-gradient(
-    180deg,
-    rgba(7, 7, 7, 1) 50%,
-    rgba(94, 16, 203, 1) 100%
-  );
-  border-radius: 5px;
-}
-
-.opinions {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
-.opinion {
-  padding: 0.5em 0.75em;
-  border: none;
-  border-radius: 0.5em;
-  background: linear-gradient(180deg, rgba(94, 16, 203, 0.25) 0%, transparent 100%);
 }
