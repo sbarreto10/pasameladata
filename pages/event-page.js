@@ -14,8 +14,15 @@ document.querySelector(".event-image-container").innerHTML = `
   `
 
 renderEvent = async () => {
+  // fetch de eventos
   const response = await fetch(`https://raw.githubusercontent.com/sbarreto10/pasameladata/main/data/events/${eventId}.json`);
   const event = await response.json();
+
+  // fetch de reviewers
+  const reviewers = {}
+  event.reviews.forEach((review) => { 
+    //
+   })
 
   // Manejo de fecha y horario
   const eventDate = new Date(...event.date)
