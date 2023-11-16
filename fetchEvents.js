@@ -31,5 +31,4 @@ renderEvents = async (nPopular) => {
   }
 };
 
-// Ejemplo: Renderizar los eventos con 2 eventos populares
 renderEvents(2);

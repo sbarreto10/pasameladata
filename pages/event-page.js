@@ -34,12 +34,30 @@ renderEvent = async () => {
       Entradas disponibles <a href="#"><u>en este link</u></a>
     </div>
   `
+
+  document.querySelector(".event-location").innerHTML = `
+    <iframe
+      src="${event.iframeSrc}"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    />
+  `
+
+  document.querySelector(".event-main-description").innerHTML = `
+    <span>${event.description}</span>
+  `
+
+  console.log(event.pics);
+
+  for (let i = 0; i < event.pics.length; i++) {
+    document.querySelector(".pic-gallery").innerHTML += `
+      <div class="pic-container"><img src="../imgs/event-${eventId}-pics/${event.pics[i]}.jpg"></div>
+    `
+  }
+
   
-};
 
-renderEvent()
-
-document.addEventListener("DOMContentLoaded", () => {
   const picContainers = document.querySelectorAll(".pic-container");
 
   picContainers.forEach((container) => {
@@ -60,4 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
-});
+
+};
+
+renderEvent()

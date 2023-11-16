@@ -26,7 +26,7 @@ header {
   top: -50%;
   z-index: -1;
   border-radius: 75px;
-  filter: blur(25px);
+  filter: contrast(1.5) blur(25px);
   transition: top ease 5s, transform ease 5s;
 }
 
@@ -207,7 +207,7 @@ nav a {
     transform: matrix3d(2, 0, 0, 0, 0, 2.5, 0, 0.006, 0, 0, 1, 0, 0, 0, 200, 1);
     /* WHAAAAAT */
     /* YEAH */
-    filter: blur(100px);
+    filter: contrast(1.5) blur(2.5vw);
   }
 
   nav {
@@ -292,22 +292,3 @@ nav a {
     border-radius: 0;
   }
 }
-
-/* #event-pics {
-  padding: 2em 1em;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  background: linear-gradient(0deg, rgb(7, 7, 7) 0%, rgb(94, 16, 203) 100%);
-}
-
-.pic-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
-.pic-gallery img {
-  width: 100%;
-  border-radius: 1em 0 1em 0;
-} */
