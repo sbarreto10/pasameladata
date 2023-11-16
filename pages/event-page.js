@@ -17,19 +17,23 @@ renderEvent = async () => {
   const response = await fetch(`https://raw.githubusercontent.com/sbarreto10/pasameladata/main/data/events/${eventId}.json`);
   const event = await response.json();
 
+  // Manejo de fecha y horario
   const eventDate = new Date(...event.date)
-  
-console.log(event.date);
+  const hours = eventDate.getHours();
+  const minutes = eventDate.getMinutes();
+  const zeroHour = hours < 10 ? `0${hours}` : hours;
+  const zeroMinutes = minutes < 10 ? `0${minutes}` : minutes;
+  const eventTime = `${zeroHour}:${zeroMinutes}`;
 
-  // document.querySelector(".event-details").innerHTML = `
-  //   <div class="event-title">${event.title} - ${event.location}</div>
-  //   <div class="event-time">
-  //     17/12/2023 - 18:00 - <span class="mandarina"><u>Única vez</u></span>
-  //   </div>
-  //   <div class="event-access">
-  //     Entradas disponibles <a href="#"><u>en este link</u></a>
-  //   </div>
-  // `
+  document.querySelector(".event-details").innerHTML = `
+    <div class="event-title">${event.title} - ${event.location}</div>
+    <div class="event-time">
+      ${eventDate.toLocaleDateString()} - ${eventTime}hs - <span class="mandarina"><u>${event.vigence}</u></span>
+    </div>
+    <div class="event-access">
+      Entradas disponibles <a href="#"><u>en este link</u></a>
+    </div>
+  `
   
 };
 

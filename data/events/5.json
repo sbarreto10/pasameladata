@@ -1,19 +1,24 @@
 {
-   "title": "asdfasdgasgdfdsagasdg",
+   "title": "Luna Park - Destino Arena - Green Velvet - LALALAND",
    "location": "CABA",
-   "iframeSrc": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13136.970944099085!2d-58.364186!3d-34.598023!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a335dda86c2db1%3A0xbdb3adc93c1fa645!2sMadero%20Boardwalk!5e0!3m2!1ses-419!2sar!4v1699933841404!5m2!1ses-419!2sar",
+   "iframeSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.085988993452!2d-58.37149272489938!3d-34.60198705740577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a335325f19f9a3%3A0xfd34b93fba734a98!2sLuna%20Park!5e0!3m2!1ses-419!2sar!4v1700157252749!5m2!1ses-419!2sar",
    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam natus deleniti omnis, autem perspiciatis nostrum inventore enim voluptate ullam doloremque magnam dignissimos molestias id, non laborum nisi eveniet mollitia! Expedita.",
-   "date": [2023, 12, 17, 18, 0],
+   "date": [2023, 8, 17, 22, 0],
    "reviews": [
       {
-         "reviewer": "2",
+         "reviewer": "1",
          "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quo ut quis eligendi itaque placeat? Autem vitae ea delectus sed?"
       },
       {
          "reviewer": "3",
          "body": "Enim, ipsa inventore temporibus excepturi recusandae corrupti magnam! Numquam incidunt eum quas sapiente rerum omnis quam, quasi laudantium assumenda enim in? Reprehenderit facere nobis ab animi quo."
+      },
+      {
+         "reviewer": "4",
+         "body": "Magnam! Numquam incidunt eum quas sapiente rerum omnis quam, quasi laudantium assumenda enim in? Reprehenderit facere nobis ab animi quo."
       }
    ],
    "vigence": "Finalizado",
+   "ticketsLink": "https://www.instagram.com/_sbarluc",
    "attendance": 59
 }

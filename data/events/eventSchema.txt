@@ -6,5 +6,6 @@
    "date": [Y,M,D,H,M],
    "reviews": [{"reviewer": String, "body": String}],
    "vigence": String,
+   "ticketsLink": String,
    "attendance": Number
 }
