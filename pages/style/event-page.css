@@ -282,13 +282,14 @@ nav a {
     flex: 50%;
   }
 
-  .pic-container-hover {
-    filter: grayscale(1) blur(2px);
+  .pic-container-hover img {
+    filter: grayscale(1) blur(2.5px) ;
   }
 
   .pic-container img {
     height: 100%;
     object-fit: cover;
     border-radius: 0;
+    transition: filter 0.5s;
   }
 }
