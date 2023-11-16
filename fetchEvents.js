@@ -1,7 +1,7 @@
 const eventIds = ["1", "2", "3", "4", "5", "6"];
 
 getEventById = async (id) => {
-  const response = await fetch(`/data/events/${id}.json`);
+  const response = await fetch(`https://raw.githubusercontent.com/sbarreto10/pasameladata/main/data/events/${id}.json`);
   const event = await response.json();
   return event;
 };
