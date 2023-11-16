@@ -1,0 +1,32 @@
+.floating-logo {
+  position: fixed;
+  left: -12vw;
+  top: 6vw;
+  width: 24vw;
+  background-color: #e7e7e7;
+  border-radius: 100%;
+  z-index: 10;
+  transition: transform 0.25s;
+}
+
+.floating-logo:hover {
+  cursor: pointer;
+  transform: translateX(18vw);
+}
+
+.floating-logo img {
+  width: 100%;
+  transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+  .floating-logo {
+   left: -4vw;
+   top: 2vw;
+   width: 8vw;
+ }
+ 
+ .floating-logo:hover {
+   transform: translateX(6vw);
+ }
+}
