@@ -6,7 +6,7 @@ getEventById = async (id) => {
   return event;
 };
 
-logNMostPopularEvents = async (nPopular) => {
+renderEvents = async (nPopular) => {
   // Obtener los eventos y sus asistencias
   const eventsWithAttendance = await Promise.all(
     eventIds.map(async (id) => {
@@ -20,17 +20,16 @@ logNMostPopularEvents = async (nPopular) => {
     (a, b) => b.event.attendance - a.event.attendance
   );
 
-  // Crear
+  // Crear elementos HTML
   for (let i = 0; i < sortedEvents.length; i++) {
     const selector = i < nPopular ? "#popular .places" : "#explore.places"
     document.querySelector(selector).innerHTML += `<div class="place">
-      <a href="./pages/event-page.html"><img
+      <a href="./pages/event-page.html?eventId=${sortedEvents[i].id}"><img
        src="./imgs/event-${sortedEvents[i].id}-pics/main.jpg"
        alt="${sortedEvents[i].event.title}"/></a>
    </div>`;
-   
   }
 };
 
-// Ejemplo: Loggear los 3 eventos con mayor asistencia
-logNMostPopularEvents(2);
+// Ejemplo: Renderizar los eventos con 2 eventos populares
+renderEvents(2);

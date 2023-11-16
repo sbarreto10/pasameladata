@@ -143,7 +143,10 @@
   }
 
   .big-view-sub-link {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
   }
 
   .small-view-sub-link {
