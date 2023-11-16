@@ -1,0 +1,10 @@
+{
+   "title": String,
+   "location": String,
+   "iframeSrc": String,
+   "description": String,
+   "date": YYYYMMDDHHMM,
+   "reviews": [{"reviewer": String, "body": String}],
+   "vigence": String,
+   "attendance": Number
+}
