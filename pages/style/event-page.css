@@ -139,6 +139,7 @@ nav a {
   aspect-ratio: 1;
   border-radius: 100%;
   overflow: hidden;
+  box-shadow: 0 0 10px #070707;
 }
 
 .reviewer-photo img {

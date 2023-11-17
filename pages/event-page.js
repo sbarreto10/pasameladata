@@ -19,10 +19,19 @@ renderEvent = async () => {
   const event = await response.json();
 
   // fetch de reviewers
-  const reviewers = {}
-  event.reviews.forEach((review) => { 
-    //
-   })
+  const eventReviewersList = await Promise.all(
+    event.reviews.map(async (review) => {
+      const _response = await fetch(`https://raw.githubusercontent.com/sbarreto10/pasameladata/main/data/reviewers/${review.reviewer}.json`);
+      const reviewerData = await _response.json()
+      const obj = {};
+      obj[review.reviewer] = reviewerData;
+      return obj
+    })
+  );
+  const eventReviewers = {};
+  for(let i = 0; i < eventReviewersList.length; i++ ) {
+    Object.assign(eventReviewers, eventReviewersList[i]);
+  }
 
   // Manejo de fecha y horario
   const eventDate = new Date(...event.date)
@@ -61,7 +70,30 @@ renderEvent = async () => {
     `
   }
 
-  
+  console.log(eventReviewers[1]);
+
+  for (let i = 0; i < event.reviews.length; i++) {
+    const id = event.reviews[i].reviewer;
+    document.querySelector("#event-reviews").innerHTML += `
+      <div class="review-card">
+        <div class="review-top">
+          <div class="reviewer-photo">
+            <img
+              src="../imgs/reviewers/${id}.jpg"
+              alt="Foto del reviewer"
+            />
+          </div>
+          <div class="review-title">
+            Review de
+            <span class="reviewer-name"><a href="#">${eventReviewers[id].firstName} ${eventReviewers[id].lastName}</a></span>
+          </div>
+        </div>
+        <div class="review-bottom">
+          ${event.reviews[i].body}
+        </div>
+      </div>
+    `
+  }
 
   const picContainers = document.querySelectorAll(".pic-container");
 
