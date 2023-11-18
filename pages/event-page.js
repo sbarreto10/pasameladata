@@ -13,15 +13,18 @@ document.querySelector(".event-image-container").innerHTML = `
     />
   `
 
+const isRemote = document.location.href.startsWith("https://sbarreto10.github.io")
+const fetchRouteRoot = isRemote ? "https://raw.githubusercontent.com/sbarreto10/pasameladata/main" : ".."
+
 renderEvent = async () => {
   // fetch de eventos
-  const response = await fetch(`https://raw.githubusercontent.com/sbarreto10/pasameladata/main/data/events/${eventId}.json`);
+  const response = await fetch(`${fetchRouteRoot}/data/events/${eventId}.json`);
   const event = await response.json();
 
   // fetch de reviewers
   const eventReviewersList = await Promise.all(
     event.reviews.map(async (review) => {
-      const _response = await fetch(`https://raw.githubusercontent.com/sbarreto10/pasameladata/main/data/reviewers/${review.reviewer}.json`);
+      const _response = await fetch(`${fetchRouteRoot}/data/reviewers/${review.reviewer}.json`);
       const reviewerData = await _response.json()
       const obj = {};
       obj[review.reviewer] = reviewerData;
@@ -69,8 +72,6 @@ renderEvent = async () => {
       <div class="pic-container"><img src="../imgs/event-${eventId}-pics/${event.pics[i]}.jpg"></div>
     `
   }
-
-  console.log(eventReviewers[1]);
 
   for (let i = 0; i < event.reviews.length; i++) {
     const id = event.reviews[i].reviewer;

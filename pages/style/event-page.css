@@ -284,7 +284,7 @@ nav a {
   }
 
   .pic-container-hover img {
-    filter: grayscale(1) blur(2.5px) ;
+    filter: grayscale(1) blur(5px) ;
   }
 
   .pic-container img {
