@@ -13,8 +13,7 @@ document.querySelector(".event-image-container").innerHTML = `
     />
   `
 
-const isRemote = document.location.href.startsWith("https://sbarreto10.github.io")
-const fetchRouteRoot = isRemote ? "https://raw.githubusercontent.com/sbarreto10/pasameladata/main" : ".."
+const fetchRouteRoot = document.location.href.startsWith("https://sbarreto10.github.io") ? "https://raw.githubusercontent.com/sbarreto10/pasameladata/main" : ".."
 
 renderEvent = async () => {
   // fetch de eventos
