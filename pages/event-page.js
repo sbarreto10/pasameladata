@@ -86,7 +86,7 @@ renderEvent = async () => {
   for (let i = 0; i < event.pics.length; i++) {
     const imgSrc = `${homeLink}/imgs/event-${eventId}-pics/${event.pics[i]}.jpg`
     document.querySelector(".pic-gallery").innerHTML += `
-      <div class="pic-container"><a href="..${imgSrc}" target="_blank"><img src="..${imgSrc}"></a></div>
+      <div class="pic-container"><a href="${imgSrc}" target="_blank"><img src="${imgSrc}"></a></div>
     `
   }
   // Renderizar reviews del evento

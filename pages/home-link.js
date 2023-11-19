@@ -1,5 +1,5 @@
 // Relativizar ruta del homelink (local/remoto)
-const homeLink = document.location.href.startsWith("https://sbarreto10.github.io") ? "/pasameladata" : "/"
+const homeLink = document.location.href.startsWith("https://sbarreto10.github.io") ? "/pasameladata/" : "../"
 document.querySelector(".floating-logo a").href = homeLink
 
 // Importar css del homelink al documento
