@@ -26,13 +26,15 @@ header {
   top: -50%;
   z-index: -1;
   border-radius: 75px;
-  filter: contrast(1.5) blur(25px);
-  transition: top ease 5s, transform ease 5s;
+  filter: contrast(1.5) blur(50vw) opacity(0);
+  transition: top ease 5s, transform ease 5s, filter ease 2s;
 }
 
 .event-image {
+  transform: translateY(-100%);
   object-fit: contain;
   border-radius: 0px 0px 15px 15px;
+  transition: transform 2s;
 }
 
 nav {
@@ -206,9 +208,7 @@ nav a {
     border-radius: 175px;
     height: 100%;
     transform: matrix3d(2, 0, 0, 0, 0, 2.5, 0, 0.006, 0, 0, 1, 0, 0, 0, 200, 1);
-    /* WHAAAAAT */
-    /* YEAH */
-    filter: contrast(1.5) blur(2.5vw);
+    filter: contrast(1.5) blur(50vw) opacity(0);
   }
 
   nav {

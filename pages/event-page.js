@@ -14,6 +14,16 @@ document.querySelector(".event-image-container").innerHTML = `
       alt="Imagen del evento"
     />
   `
+
+// Transición inicial de imagen principal del evento
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    document.querySelector(".event-image").style.transform = "translate(0)"
+    document.querySelector(".event-image-bg").style.filter = "contrast(1.5) blur(2.5vw) opacity(1)"
+  }, [0])
+});
+
+
 // Relativizar ruta para el fetching de los datos (local/remoto)
 const fetchRouteRoot = document.location.href.startsWith("https://sbarreto10.github.io") ? "https://raw.githubusercontent.com/sbarreto10/pasameladata/main" : ".."
 
