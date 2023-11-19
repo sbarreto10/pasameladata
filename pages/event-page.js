@@ -81,10 +81,12 @@ renderEvent = async () => {
   document.querySelector(".event-main-description").innerHTML = `
     <span>${event.description}</span>
   `
+
   // Renderizar galería de pics del evento
   for (let i = 0; i < event.pics.length; i++) {
+    const imgSrc = `${homeLink}/imgs/event-${eventId}-pics/${event.pics[i]}.jpg`
     document.querySelector(".pic-gallery").innerHTML += `
-      <div class="pic-container"><img src="../imgs/event-${eventId}-pics/${event.pics[i]}.jpg"></div>
+      <div class="pic-container"><a href="..${imgSrc}" target="_blank"><img src="..${imgSrc}"></a></div>
     `
   }
   // Renderizar reviews del evento
