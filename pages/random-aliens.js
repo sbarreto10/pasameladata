@@ -1,1 +1,0 @@
-document.querySelector(".img-container").innerHTML+=`<img src="../imgs/aliens-${Math.floor(Math.random() * 4) + 1}.png" alt="Amiguis">`

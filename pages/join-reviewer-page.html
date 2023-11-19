@@ -59,7 +59,9 @@
   <div class="img-container">
     <div class="overlay"></div>
   </div>
-  <script src="./random-aliens.js"></script>
+  <script>
+    document.querySelector(".img-container").innerHTML+=`<img src="../imgs/aliens-${Math.floor(Math.random() * 4) + 1}.png" alt="Amiguis">`
+  </script>
   <script src="./home-link.js"></script>
 </body>
 </html>

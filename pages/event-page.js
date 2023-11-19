@@ -113,6 +113,9 @@ renderEvent = async () => {
     `
   }
 
+  // Renderizar asistencia al evento
+  document.querySelector("#event-attendance").innerHTML += `<div class="align-self-center mandarina"><b>${event.attendance} Personas asistirán</b></div>`
+
   // Gestionar estilos y eventListeners de la galería del evento
   const picContainers = document.querySelectorAll(".pic-container");
   picContainers.forEach((container) => {
