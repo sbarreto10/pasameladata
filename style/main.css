@@ -146,7 +146,11 @@
     display: none;
   }
 
-  .place {
+  #popular .place {
+    height: 50vh;
+  }
+
+  #explore .place {
     height: 75vh;
   }
 

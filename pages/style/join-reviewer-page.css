@@ -1,0 +1,57 @@
+body {
+  padding-inline-start: 10vw;
+  flex-direction: row;
+  gap: 4em;
+}
+
+form {
+  margin: 6em 3em 6em 1em;
+  height: fit-content;
+}
+
+.form-group {
+  padding: 0 !important;
+}
+
+button {
+  color: black !important;
+  background-color: #7c1bbd !important;
+}
+
+button:focus,
+button:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.img-container {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  form {
+    margin: 6em 10em 6em 1em;
+    width: 30%;
+  }
+
+  .img-container {
+    position: relative;
+    display: flex;
+    flex: 1;
+  }
+
+  .img-container img {
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #070707, transparent);
+  }
+}
