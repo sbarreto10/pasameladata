@@ -1,6 +1,8 @@
+// Recibir id del evento como parámetro de la url
 const urlParams = new URLSearchParams(window.location.search);
 const eventId = urlParams.get('eventId');
 
+// Renderizar imagen principal
 document.querySelector(".event-image-container").innerHTML = `
     <img
       class="event-image-bg"
@@ -12,15 +14,16 @@ document.querySelector(".event-image-container").innerHTML = `
       alt="Imagen del evento"
     />
   `
-
+// Relativizar ruta para el fetching de los datos (local/remoto)
 const fetchRouteRoot = document.location.href.startsWith("https://sbarreto10.github.io") ? "https://raw.githubusercontent.com/sbarreto10/pasameladata/main" : ".."
 
+// Función de renderización de datos que requieran fetching
 renderEvent = async () => {
-  // fetch de eventos
+  // Fetchear evento
   const response = await fetch(`${fetchRouteRoot}/data/events/${eventId}.json`);
   const event = await response.json();
 
-  // fetch de reviewers
+  // Fetchear y obtener lista de reviewers del evento con formato {id: fetchedReviewer}
   const eventReviewersList = await Promise.all(
     event.reviews.map(async (review) => {
       const _response = await fetch(`${fetchRouteRoot}/data/reviewers/${review.reviewer}.json`);
@@ -30,12 +33,14 @@ renderEvent = async () => {
       return obj
     })
   );
+
+  // Formatear lista de reviewers en un solo objeto con esquema {id: fetchedReviewer}
   const eventReviewers = {};
   for(let i = 0; i < eventReviewersList.length; i++ ) {
     Object.assign(eventReviewers, eventReviewersList[i]);
   }
 
-  // Manejo de fecha y horario
+  // Crear variables de fecha y horario
   const eventDate = new Date(...event.date)
   const hours = eventDate.getHours();
   const minutes = eventDate.getMinutes();
@@ -43,6 +48,7 @@ renderEvent = async () => {
   const zeroMinutes = minutes < 10 ? `0${minutes}` : minutes;
   const eventTime = `${zeroHour}:${zeroMinutes}`;
 
+  // Renderizar detalles del evento
   document.querySelector(".event-details").innerHTML = `
     <div class="event-title">${event.title} - ${event.location}</div>
     <div class="event-time">
@@ -52,7 +58,7 @@ renderEvent = async () => {
       Entradas disponibles <a href="#"><u>en este link</u></a>
     </div>
   `
-
+  // Renderizar maps iframe de la ubicación del evento
   document.querySelector(".event-location").innerHTML = `
     <iframe
       src="${event.iframeSrc}"
@@ -61,17 +67,17 @@ renderEvent = async () => {
       referrerpolicy="no-referrer-when-downgrade"
     />
   `
-
+  // Renderizar descripción del evento
   document.querySelector(".event-main-description").innerHTML = `
     <span>${event.description}</span>
   `
-
+  // Renderizar galería de pics del evento
   for (let i = 0; i < event.pics.length; i++) {
     document.querySelector(".pic-gallery").innerHTML += `
       <div class="pic-container"><img src="../imgs/event-${eventId}-pics/${event.pics[i]}.jpg"></div>
     `
   }
-
+  // Renderizar reviews del evento
   for (let i = 0; i < event.reviews.length; i++) {
     const id = event.reviews[i].reviewer;
     document.querySelector("#event-reviews").innerHTML += `
@@ -95,19 +101,17 @@ renderEvent = async () => {
     `
   }
 
+  // Gestionar estilos y eventListeners de la galería del evento
   const picContainers = document.querySelectorAll(".pic-container");
-
   picContainers.forEach((container) => {
     container.addEventListener("mouseover", () => {
       // Cuando el mouse está sobre un elemento, la opacidad de todos cambia a 0.5
       picContainers.forEach((c) => {
         c.classList.add("pic-container-hover");
       });
-
       // Excepto el que está en :hover
       container.classList.remove("pic-container-hover");
     });
-
     container.addEventListener("mouseout", () => {
       // Cuando el mouse sale de un elemento, la opacidad de todos cambia a 1
       picContainers.forEach((c) => {

@@ -7,6 +7,7 @@
 /* sub-box */
 
 #subscription-box {
+  position: relative;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -14,6 +15,7 @@
   font-size: 2em;
   box-sizing: border-box;
   border-radius: 10%;
+  overflow: hidden;
 }
 
 .big-view-sub-link {
@@ -45,6 +47,18 @@
 .btn:active {
   outline: none !important;
   box-shadow: none;
+}
+
+.place {
+  overflow: hidden;
+  height: 50vh;
+  border-radius: 2em 0;
+}
+
+.place img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* bg-video */
@@ -80,33 +94,6 @@
    text-decoration: underline!important;
 }
 
-.places {
-  flex: 3;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 10px;
-  padding: 10px;
-}
-
-.place {
-  overflow: hidden;
-  border-radius: 30px 0;
-  transition: border 0.25s;
-}
-
-.place img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.places .grid {
-  flex: 1;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 800px 800px;
-}
-
 /* emoji marcianito */
 #subscription-box span {
   font-size: 4em;
@@ -131,53 +118,30 @@
   }
 
   #subscription-box {
-    padding-inline: 30px;
     transform: scale(0.8);
-    transition: box-shadow 0.25s, background-color 0.25s;
-  }
-
-  #subscription-box:hover {
-    background-color: #7c1bbd;
-    box-shadow: 0 0 30px rgb(153, 0, 255);
-    cursor: pointer;
   }
 
   .big-view-sub-link {
+    padding-inline: 30px;
     display: flex;
     flex-direction: column;
-    flex: 1;
     justify-content: center;
+    border-radius: 1em;
+    transition: box-shadow 0.25s, background-color 0.25s;
+  }
+  
+  .big-view-sub-link:hover {
+    background-color: #7c1bbd;
+    box-shadow: 0 0 30px rgb(153, 0, 255);
+    cursor: pointer;
   }
 
   .small-view-sub-link {
     display: none;
   }
 
-  .places {
-    flex: 3;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 20px;
-  }
-
-  #popular .places {
-    grid-template-rows: 400px;
-    grid-auto-rows: 400px;
-  }
-
-  #explore.places {
-    grid-template-rows:600px;
-    grid-auto-rows: 600px;
-  }
-
-  .place {
-    overflow: hidden;
-    transition: transform 0.25s;
-  }
-
   .place:hover {
     z-index: 1;
-    /* transform:  */
     transform: rotate(-2deg) scale(1.05);
   }
 
