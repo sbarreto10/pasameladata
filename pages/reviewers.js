@@ -34,14 +34,17 @@ renderEvent = async () => {
    console.log(reviewer);
     document.querySelector("#reviewers-grid").innerHTML += `
       <div class="reviewer-card">
-         <div class="reviewer-profile">
-            <div class="reviewer-photo">
-               <img src="../imgs/reviewers/${reviewers[i]}.jpg" alt="" />
-            </div>
-            <div class="reviewer-name">${reviewer.firstName} ${reviewer.lastName}</div>
+        <div class="reviewer-photo-bg">
+            <img src="../imgs/reviewers/${reviewers[i]}.jpg" alt="Foto del reviewer" />
          </div>
-         <div class="reviewer-media">
-            <a href="https://www.instagram.com/officialrickastley/">instagram</a>
+         <div class="reviewer-photo">
+            <img src="../imgs/reviewers/${reviewers[i]}.jpg" alt="Foto del reviewer" />
+         </div>
+         <div class="reviewer-text">
+           <div class="reviewer-name">${reviewer.firstName} ${reviewer.lastName}</div>
+           <div class="reviewer-media">
+              <a href="https://www.instagram.com/officialrickastley/" target="_BLANK">> <u>instagram</u></a>
+           </div>
          </div>
       </div>
     `;
