@@ -36,7 +36,7 @@
 
 .small-view-sub-link .btn {
   color: black;
-  background-color: #7c1bbd;
+  background: linear-gradient(90deg, rgba(94,16,202,1) 0%, rgba(185,0,255,1) 100%);
 }
 
 .small-view-sub-link .text {
@@ -91,6 +91,7 @@
    text-align: center;
    background-color: #7c1bbd;
    padding: 1em;
+   background: linear-gradient(90deg, rgba(94,16,202,1) 0%, rgba(185,0,255,1) 100%);
 }
 
 .subtitle a{
@@ -106,6 +107,7 @@
 
 .bg-video video {
   background-color: #111111;
+  filter: grayscale(1) ;
 }
 
 @keyframes marcianito-flotante {
@@ -135,13 +137,15 @@
     justify-content: center;
     border-radius: 1em;
     z-index: 1;
-    transition: box-shadow 0.25s, background-color 0.25s;
+    box-shadow: 0 0 5px 1px rgb(255, 44, 206);
+    transition: box-shadow 0.75s;
   }
   
   .big-view-sub-link:hover {
-    background-color: #7c1bbd;
-    box-shadow: 0 0 30px rgb(153, 0, 255);
+    background: linear-gradient(90deg, rgba(94,16,202,1) 0%, rgba(185,0,255,1) 100%);
+    box-shadow: 0 0 40px 1px rgb(255, 44, 206);
     cursor: pointer;
+    transition: box-shadow 0s;
   }
 
   .small-view-sub-link {

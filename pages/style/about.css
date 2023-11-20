@@ -1,5 +1,5 @@
 body {
-  padding: 1em;
+  padding: 6em 1em 3em 1em;
 }
 
 .about-section {
@@ -30,7 +30,8 @@ body {
   bottom: -1em;
   border-radius: 0.5em;
   padding: 0 0.15em;
-  border: 0.1em solid rgb(7, 7, 7);
+  aspect-ratio: 1;
+  border: 2px solid rgb(7, 7, 7);
   transform: scale(0.8);
 }
 

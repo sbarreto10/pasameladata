@@ -68,7 +68,7 @@
 @media (min-width: 768px) {
   #reviewers-grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: min-content;
+    grid-auto-rows: min-content;
     margin: 10vh 100px;
     gap: 2em;
     font-size: 2em;

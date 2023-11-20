@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+.gradient-bg {
+  background: linear-gradient(90deg, rgba(94,16,202,1) 0%, rgba(185,0,255,1) 100%);
+}
+
 body {
   width: 100%;
   background-color: rgb(7, 7, 7);

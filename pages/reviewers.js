@@ -1,4 +1,4 @@
-const nRev = 6
+const nRev = 10
 
 const reviewers = [];
 for (let i = 1; i <= nRev; i++) {
