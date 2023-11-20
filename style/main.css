@@ -124,6 +124,7 @@
 
   #subscription-box {
     transform: scale(0.8);
+    overflow: visible;
   }
 
   .big-view-sub-link {
@@ -133,6 +134,7 @@
     flex-direction: column;
     justify-content: center;
     border-radius: 1em;
+    z-index: 1;
     transition: box-shadow 0.25s, background-color 0.25s;
   }
   
