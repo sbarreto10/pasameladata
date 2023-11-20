@@ -1,11 +1,12 @@
+// Establecer cantidad de reviewers a fetchear
+// (Para no tener que manejar directorios)
+
 const nRev = 10
 
 const reviewers = [];
 for (let i = 1; i <= nRev; i++) {
   reviewers.push(i)
 }
-
-console.log(reviewers);
 
 // Relativizar ruta para el fetching de los datos (local/remoto)
 const fetchRouteRoot = document.location.href.startsWith(
