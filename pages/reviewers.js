@@ -1,4 +1,11 @@
-const reviewers = ["1", "2", "3", "4", "5", "6"];
+const nRev = 6
+
+const reviewers = [];
+for (let i = 1; i <= nRev; i++) {
+  reviewers.push(i)
+}
+
+console.log(reviewers);
 
 // Relativizar ruta para el fetching de los datos (local/remoto)
 const fetchRouteRoot = document.location.href.startsWith(
