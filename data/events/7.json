@@ -1,0 +1,25 @@
+{
+   "title": "Rebord dice cosas - Gran Rex",
+   "location": "CABA",
+   "iframeSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.030792428541!2d-58.381441524899365!3d-34.60338285747932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaceed5746b9%3A0xf933ab84305babc0!2sTeatro%20Gran%20Rex!5e0!3m2!1ses-419!2sar!4v1700583865580!5m2!1ses-419!2sar",
+   "description": "Nihil, aliquam pariatur. Deserunt, nihil aperiam. Quibusdam consequuntur hic veritatis sunt. Eaque minima ipsam excepturi iure expedita recusandae ducimus voluptate!",
+   "date": [2023, 11, 4, 20, 30],
+   "reviews": [
+      {
+         "reviewer": "8",
+         "body": "Lorem ipsum dolor autem vitae ea delectus sed?"
+      },
+      {
+         "reviewer": "9",
+         "body": "Eaque minima ipsam excepturi iure expedita recusandae ducimus voluptate!"
+      },
+      {
+         "reviewer": "4",
+         "body": "Saepe, animi asperiores quas? Nam at adipisci molestiae reiciendis quo omnis? Quos tenetur dicta esse quae fuga voluptatum vero repellat veniam."
+      }
+   ],
+   "pics": [1,2,3,4,5],
+   "vigence": "Única vez",
+   "ticketsLink": "https://twitter.com/rickastley",
+   "attendance": 135
+}

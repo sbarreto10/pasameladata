@@ -1,12 +1,19 @@
 // Establecer cantidad de eventos a fetchear
 // (Para no tener que manejar directorios)
 
-const nEv = 6;
+const nEv = 7;
 
 const eventIds = [];
 for (let i = 1; i <= nEv; i++) {
    eventIds.push(i);
 }
+
+// Relativizar ruta para el fetching de los datos (local/remoto)
+const fetchRouteRoot = document.location.href.startsWith(
+   "https://sbarreto10.github.io"
+)
+   ? "https://raw.githubusercontent.com/sbarreto10/pasameladata/main"
+   : "..";
 
 // Cuando cargue todo el contenido del DOM, se crean los eventListeners para los links de suscripción
 document.addEventListener("DOMContentLoaded", () => {
@@ -20,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
    subClicks.forEach((subClick) => {
       subClick.addEventListener("click", () => {
          subModal.style.display = "flex";
-         setTimeout(() => subModal.style.transform = "scale(1)", [0]);
+         setTimeout(() => (subModal.style.transform = "scale(1)"), [0]);
       });
    });
    closeBtn.addEventListener("click", () => {
@@ -33,9 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Recibe un id y devuelve el evento (en forma de promesa)
 getEventById = async (id) => {
-   const response = await fetch(
-      `https://raw.githubusercontent.com/sbarreto10/pasameladata/main/data/events/${id}.json`
-   );
+   const response = await fetch(`${fetchRouteRoot}/data/events/${id}.json`);
    const event = await response.json();
    return event;
 };

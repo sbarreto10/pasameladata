@@ -64,7 +64,6 @@
   height: 50vh;
   border-radius: 2em 0;
   margin-block-start: 0.75em;
-  margin-inline-end: 0.75em;
 }
 
 .place img {
@@ -166,6 +165,10 @@
 
   #explore .place {
     height: 75vh;
+  }
+
+  .place {
+    margin-inline: 0.75em; 
   }
 
   .place img {

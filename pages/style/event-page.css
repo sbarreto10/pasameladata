@@ -76,6 +76,15 @@ nav a {
   color: rgb(255, 157, 0);
 }
 
+.fuxia-link {
+  color: rgb(255, 20, 100)!important;
+  transition: color 0.25s;
+}
+
+.fuxia-link:hover {
+  color: rgb(255, 100, 200)!important;
+}
+
 .event-location {
   display: flex;
   justify-content: center;

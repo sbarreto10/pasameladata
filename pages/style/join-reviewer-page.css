@@ -28,6 +28,24 @@ button:active {
   display: none;
 }
 
+input, textarea {
+  font-size: inherit;
+  padding: 0.25em 0.5em;
+  background-color: transparent !important;
+  color: #e7e7e7;
+}
+
+select {
+  background-color: rgb(200,200,200) !important;
+}
+
+input:focus {
+  box-shadow: none;
+  border: solid 1px rgb(137, 16, 202);
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  color: #070707;
+}
+
 @media (min-width: 768px) {
   form {
     margin: 6em 10em 6em 1em;

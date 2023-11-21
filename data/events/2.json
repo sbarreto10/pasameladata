@@ -32,6 +32,7 @@
    ],
    "pics": [1,2,3,4,5],
    "vigence": "Única vez",
-   "ticketsLink": "https://www.instagram.com/_sbarluc",
+   "ticketsLink": null,
+   "accessMessage": "Entradas agotadas",
    "attendance": 314
 }

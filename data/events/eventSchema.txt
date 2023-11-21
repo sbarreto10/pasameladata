@@ -8,5 +8,6 @@
    "pics": [String],
    "vigence": String,
    "ticketsLink": String,
+   (opcional) "accessMessage": String,
    "attendance": Number
 }
