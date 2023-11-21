@@ -1,32 +1,37 @@
 .floating-logo {
+  display: flex;
+  justify-content: right;
   position: fixed;
-  left: -12vw;
-  top: 6vw;
-  width: 24vw;
-  background-color: #e7e7e7;
-  border-radius: 100%;
+  left: -40px;
+  top: 20px;
+  width: 80px;
+  height: 80px;
   z-index: 10;
-  transition: transform 0.25s;
+  transition: padding-inline-start 0.25s;
 }
 
 .floating-logo:hover {
   cursor: pointer;
-  transform: translateX(18vw);
+  padding-inline-start: 200px;
 }
 
 .floating-logo img {
-  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
   transform: scale(1.1);
+  background-color: #e7e7e7;
+  border-radius: 100%;
 }
 
 @media (min-width: 768px) {
   .floating-logo {
-   left: -4vw;
-   top: 2vw;
-   width: 8vw;
+   left: -60px;
+   top: 30px;
+   width: 120px;
+   height: 120px;
  }
  
  .floating-logo:hover {
-   transform: translateX(6vw);
+    padding-inline-start: 200px;
  }
 }

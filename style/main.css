@@ -2,6 +2,7 @@
 
 .prev-section {
   display: flex;
+  position: relative;
 }
 
 /* sub-box */
@@ -34,19 +35,24 @@
    animation: marcianito-flotante ease-in alternate 1s infinite;
 }
 
-.small-view-sub-link .btn {
+.btn {
   color: black;
   background: linear-gradient(90deg, rgba(94,16,202,1) 0%, rgba(185,0,255,1) 100%);
-}
-
-.small-view-sub-link .text {
-  font-size: 0.75em;
+  transition: filter 0.25s;
 }
 
 .btn:focus,
 .btn:active {
   outline: none !important;
   box-shadow: none;
+}
+
+.btn:hover {
+  filter: contrast(2.5);
+}
+
+.small-view-sub-link .text {
+  font-size: 0.75em;
 }
 
 .places {
@@ -145,6 +151,8 @@
     background: linear-gradient(90deg, rgba(94,16,202,1) 0%, rgba(185,0,255,1) 100%);
     box-shadow: 0 0 40px 1px rgb(255, 44, 206);
     cursor: pointer;
+    color: #070707;
+    font-weight: bold;
     transition: box-shadow 0s;
   }
 
