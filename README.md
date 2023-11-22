@@ -1,11 +1,11 @@
 # Pasame La Data
 ****
-Este es el repositorio del proyecto final del curso de Frontend de BA Multiplica.
+Este es el repositorio del proyecto final del curso de Frontend de BA Multiplica.   
 El sitio se encuentra actualmente accesible en [este link](https://sbarreto10.github.io/pasameladata/).
 ****
 ## Duración
-Inicio: 19/10/2023
-Entrega: 21/11/2023
+Inicio: 19/10/2023   
+Entrega: 21/11/2023   
 *(Luego de la entrega, el proyecto seguirá en desarrollo)*
 ****
 ## Cómo evolucionó el proyecto?
@@ -23,3 +23,11 @@ Adoptando la metodología "Mobile First", se logra que la aplicación sea accesi
 El uso de operaciones como fetch, setTimeout, y setInterval permite la presentación dinámica de contenido.
 ### Manejo de los datos dinámicos en esta versión
 Para organizar y almacenar los datos, se optó por estructurar las distintas categorías en carpetas (./data/eventos y ./data/reviewers), cada una conteniendo archivos JSON que representan los datos respectivos. Con este enfoque se simula una especie de base de datos no relacional a nivel local en el frontend, donde cada carpeta actúa como una colección de datos. *Esta implementación es una solución simplificada y local, que se reemplazaría por el uso de una base de datos más robusta, como MongoDB, en una versión más avanzada del proyecto, con la gestión de datos trasladada al backend.*
+****
+## Datos de ejemplo
+Las imágenes usadas para esta demo provienen de:
+- Google imagenes
+- [@baires.electronica](https://www.instagram.com/baires.electronica/)
+- [thispersondoesnotexist](https://thispersondoesnotexist.com/)
+- [Stable Diffusion](https://stablediffusionweb.com/)
+- [Dall·e 2](https://openai.com/dall-e-2)
