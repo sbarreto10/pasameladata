@@ -21,7 +21,7 @@ a {
   color: inherit !important;
 }
 
-#marcianito-box {
+.marcianito-box {
   width: 100vw;
   height: 4em;
   overflow: hidden;
@@ -29,9 +29,10 @@ a {
   z-index: 0;
 }
 
-#marcianito {
+.marcianito {
   height: 100%;
   position: absolute;
+  z-index: 2;
   animation: moverMarcianito 5s linear infinite;
 }
 
@@ -49,7 +50,7 @@ a {
     font-size: 0.66em;
   }
 
-  #marcianito-box {
+  .marcianito-box {
     height: 10em;
   }
 }

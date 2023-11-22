@@ -15,8 +15,9 @@ const fetchRouteRoot = document.location.href.startsWith(
    ? "https://raw.githubusercontent.com/sbarreto10/pasameladata/main"
    : "..";
 
-// Cuando cargue todo el contenido del DOM, se crean los eventListeners para los links de suscripción
+// Cuando cargue todo el contenido del DOM, se crean los eventListeners para los elementos estáticos
 document.addEventListener("DOMContentLoaded", () => {
+   // Links a suscripción
    const subClicks = [
       document.querySelector(".big-view-sub-link"),
       document.querySelector(".small-view-sub-link .btn"),

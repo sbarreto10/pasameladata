@@ -4,7 +4,7 @@
   gap: 10px;
   justify-content: space-between;
   background: linear-gradient(90deg, rgba(94,16,202,1) 0%, rgba(185,0,255,1) 100%);
-  padding: 30px 10px;
+  padding: 30px 20px;
 }
 
 .search-text {
@@ -29,15 +29,15 @@
   .search-container {
     display: flex;
     flex-direction: row;
-    gap: 0;
-    align-items: baseline;
-    justify-content: right;
-    padding: 30px 30px;
+    gap: 0.75em;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 60px;
   }
 
   .search-text {
     font-size: 2em;
-    padding: 0.75em 1.25em;
+    padding-block: 0.75em ;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
