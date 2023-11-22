@@ -25,7 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Relativizar ruta para el fetching de los datos (local/remoto)
-const fetchRouteRoot = document.location.href.startsWith("https://sbarreto10.github.io") ? "https://raw.githubusercontent.com/sbarreto10/pasameladata/main" : ".."
+const fetchRouteRoot = document.location.href.startsWith(
+  "https://sbarreto10.github.io"
+) || document.location.href.startsWith(
+  "file:"
+)
+  ? "https://raw.githubusercontent.com/sbarreto10/pasameladata/main"
+  : "..";
 
 // Función de renderización de datos que requieran fetching
 renderEvent = async () => {
@@ -86,7 +92,7 @@ renderEvent = async () => {
 
   // Renderizar galería de pics del evento
   for (let i = 0; i < event.pics.length; i++) {
-    const imgSrc = `${homeLink}/imgs/event-${eventId}-pics/${event.pics[i]}.jpg`
+    const imgSrc = `../imgs/event-${eventId}-pics/${event.pics[i]}.jpg`
     document.querySelector(".pic-gallery").innerHTML += `
       <div class="pic-container"><a href="${imgSrc}" target="_blank"><img src="${imgSrc}"></a></div>
     `

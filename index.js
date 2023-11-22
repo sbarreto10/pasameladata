@@ -11,6 +11,8 @@ for (let i = 1; i <= nEv; i++) {
 // Relativizar ruta para el fetching de los datos (local/remoto)
 const fetchRouteRoot = document.location.href.startsWith(
    "https://sbarreto10.github.io"
+) || document.location.href.startsWith(
+   "file:"
 )
    ? "https://raw.githubusercontent.com/sbarreto10/pasameladata/main"
    : "..";
