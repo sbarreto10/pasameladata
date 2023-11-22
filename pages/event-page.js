@@ -73,7 +73,9 @@ renderEvent = async () => {
     ${
       event.ticketsLink ?
       `<div class="event-access">Entradas disponibles <a class="fuxia-link" href="${event.ticketsLink}" target="_BLANK"><u>en este link</u></a></div>`
-      : `<div class="text-secondary">${event.accessMessage}</div>`
+      :(
+         event.accessMessage!=undefined ? `<div class="text-secondary">${event.accessMessage}</div>` : ""
+        )
     }
   `
   // Renderizar maps iframe de la ubicación del evento
