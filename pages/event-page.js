@@ -39,6 +39,8 @@ renderEvent = async () => {
   const response = await fetch(`${fetchRouteRoot}/data/events/${eventId}.json`);
   const event = await response.json();
 
+  document.title = `PLD - ${event.title}`
+
   // Fetchear y obtener lista de reviewers del evento con formato {id: fetchedReviewer}
   const eventReviewersList = await Promise.all(
     event.reviews.map(async (review) => {
