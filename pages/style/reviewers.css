@@ -137,16 +137,14 @@
   .btn {
     margin-top: 200px;
     position: relative;
-    justify-self: center;
-    font-weight: bold;
-    padding-top: 10px;
-    padding-inline: 30px;
+    padding-top: 20px;
+    padding-inline: 40px;
     font-size: 80px;
-    border-radius: 10px;
+    transform: translateX(-300px);
   }
   
   .btn:hover {
     cursor: pointer;
-    filter: contrast(2.5);
+    filter: contrast(3);
   }
 }
